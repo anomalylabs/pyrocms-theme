@@ -21,12 +21,16 @@
 {% include "theme::partials/header" %}
 
 <div id="app">
+    {# Buttons #}
     <div class="container">
-
-        {% include "theme::partials/messages" %}
-
-        {% block content %}{% endblock %}
-
+        <div class="row">
+            <div class="col-4">
+                <button class="a-button">Click</button>
+            </div>
+            <div class="col-4">
+                <a href="#" class="a-button">Link</a>
+            </div>
+        </div>
     </div>
 </div>
 
