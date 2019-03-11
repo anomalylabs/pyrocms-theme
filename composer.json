@@ -1,0 +1,9 @@
+{
+    "name": "anomalylabs/pyrocms-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Anomalylabs\\PyrocmsTheme\\": "src/"
+        }
+    }
+}
