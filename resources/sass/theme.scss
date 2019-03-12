@@ -6,4 +6,8 @@
 @import '~bootstrap/scss/root';
 @import '~bootstrap/scss/reboot';
 @import '~bootstrap/scss/type';
-@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import './atoms/_skew';
+@import './atoms/_buttons';
+@import './molecules/_header';

@@ -1,0 +1,39 @@
+.a-button
+{
+    line-height: 37px;
+    height: 37px;
+    border-radius: 30px;
+    padding:0 30px;
+    border:0;
+    background:#FFF;
+    display:inline-block;
+    color:#000 !important;
+    transition: all 300ms ease-in-out;
+}
+
+.a-button:hover 
+{
+    text-decoration: none;
+    color:$blue;
+}
+
+.a-button.--small
+{
+    font-size: .8rem;
+    line-height: 30px;
+    height: 30px;
+    padding:0 20px;
+    
+}
+
+.a-button.--large
+{
+    font-size: 1.2rem;
+    line-height: 50px;
+    height: 50px;
+    padding:0 40px;
+}
+.a-button.--block
+{
+    width:100%;
+}

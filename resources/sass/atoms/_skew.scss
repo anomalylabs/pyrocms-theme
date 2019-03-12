@@ -1,0 +1,40 @@
+.a-skew 
+{
+    position: relative;
+    margin: 100px 0;
+    padding: 100px 0;
+    
+    /*
+        ------------------------------------------------------------------------
+        Skew after a non-skewed section.
+        TODO: Make this extra class unnecessary.
+        ------------------------------------------------------------------------
+    */
+    &.--beta 
+    {
+        margin-top:-100px;
+        z-index: 1;
+    }
+}
+
+.a-skew:before { 
+    
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height:100%;
+        
+        top: 0;
+        
+        transform: skewY(-1deg);
+        background: $blue;
+    
+}
+.a-skew 
+{
+    &.--white:before 
+    {
+        background: #fff;
+    }
+}

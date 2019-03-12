@@ -18,25 +18,162 @@
 
 <body>
 
-{% include "theme::partials/header" %}
+    {# {% include "theme::partials/header" %} #}
 
-<div id="app">
-    {# Buttons #}
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <button class="a-button">Click</button>
+    <div id="app">
+        <header class="m-header --gradient-beta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="m-header__wrapper">
+                            <div class="row">
+                                <div class="col-8 mx-auto">
+                                    <h1>Build better Laravel websites and applications faster with Pyro.</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sunt rerum eius
+                                        esse
+                                        eveniet sint earum totam perspiciatis ut sit?
+                                    </p>
+                                    <a href="#" class="a-button">Find out more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4">
-                <a href="#" class="a-button">Link</a>
+        </header>
+        <section class="a-skew --white --beta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Lorem, ipsum dolor.</h2>
+                    </div>
+                    <div class="col-4">
+                        <h3>Suck my dick</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, illum.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h3>Suck my dick</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, illum.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <h3>Suck my dick</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, illum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="a-skew">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Buttons</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex earum nobis aliquid. Inventore
+                            corrupti,
+                            voluptatibus deleniti asperiores libero debitis, illo, autem ullam soluta ratione eum. Hic
+                            odio
+                            praesentium, nemo exercitationem alias eveniet ratione placeat, dolorum nobis sed minima
+                            consequuntur
+                            deserunt!
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button class="a-button --small">Small Button</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="a-button --block">Regular Button</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="a-button --large">Large Button</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {# Buttons #}
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <button class="a-button --small">Small Button</button>
+                </div>
+                <div class="col-4">
+                    <button class="a-button">Regular Button</button>
+                </div>
+                <div class="col-4">
+                    <button class="a-button">Large Button</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <a href="#" class="a-link">Small Link
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="a-link">Regular Link
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="a-link">Large Link
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <ol class="m-ol">
+                        <li>Ordered List Item
+                        </li>
+                        <li>Ordered List Item
+                        </li>
+                        <li>Ordered List Item
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-6">
+                    <ul class="m-ul">
+                        <li>Un-Ordered List Item
+                        </li>
+                        <li>Un-Ordered List Item
+                        </li>
+                        <li>Un-Ordered List Item
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <section class="a-skew">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Buttons
+                        </h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex earum nobis aliquid. Inventore
+                            corrupti,
+                            voluptatibus deleniti asperiores libero debitis, illo, autem ullam soluta ratione eum. Hic
+                            odio
+                            praesentium, nemo exercitationem alias eveniet ratione placeat, dolorum nobis sed minima
+                            consequuntur
+                            deserunt!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</div>
 
-{% include "theme::partials/footer" %}
-{% include "theme::partials/assets" %}
+
+    {# {% include "theme::partials/footer" %} #}
+    {% include "theme::partials/assets" %}
 
 </body>
+
 </html>
 {% endhtmlcompress %}

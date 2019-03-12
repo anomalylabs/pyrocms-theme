@@ -1,0 +1,127 @@
+
+.m-header {
+  display: flex;
+  height: 100vh;
+  * {
+    color: #ffffff;
+    text-align:center;
+  }
+  .container > .row {
+    height: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 100px);
+  }
+}
+.m-header.--gradient {
+  background: linear-gradient(337deg, #838dff, #cd74ff, #ff8ac1);
+  background-size: 600% 600%;
+
+  -webkit-animation: a-gradient 28s ease infinite;
+     -moz-animation: a-gradient 28s ease infinite;
+       -o-animation: a-gradient 28s ease infinite;
+          animation: a-gradient 28s ease infinite;
+
+  @-webkit-keyframes a-gradient {
+    0% {
+      background-position: 0 79%;
+    }
+    50% {
+      background-position: 100% 22%;
+    }
+    100% {
+      background-position: 0 79%;
+    }
+  }
+  @-moz-keyframes a-gradient {
+    0% {
+      background-position: 0 79%;
+    }
+    50% {
+      background-position: 100% 22%;
+    }
+    100% {
+      background-position: 0 79%;
+    }
+  }
+  @-o-keyframes a-gradient {
+    0% {
+      background-position: 0 79%;
+    }
+    50% {
+      background-position: 100% 22%;
+    }
+    100% {
+      background-position: 0 79%;
+    }
+  }
+  @keyframes a-gradient {
+    0% {
+      background-position: 0 79%;
+    }
+    50% {
+      background-position: 100% 22%;
+    }
+    100% {
+      background-position: 0 79%;
+    }
+  }
+}
+
+.m-header.--gradient-beta {
+  background: linear-gradient(328deg, #838dff, #cd74ff, #ff8ac1);
+  background-size: 600% 600%;
+
+  -webkit-animation: a-gradient-beta 28s ease infinite;
+     -moz-animation: a-gradient-beta 28s ease infinite;
+       -o-animation: a-gradient-beta 28s ease infinite;
+          animation: a-gradient-beta 28s ease infinite;
+
+  @-webkit-keyframes a-gradient-beta {
+    0% {
+      background-position: 0 11%;
+    }
+    50% {
+      background-position: 100% 90%;
+    }
+    100% {
+      background-position: 0 11%;
+    }
+  }
+  @-moz-keyframes a-gradient-beta {
+    0% {
+      background-position: 0 11%;
+    }
+    50% {
+      background-position: 100% 90%;
+    }
+    100% {
+      background-position: 0 11%;
+    }
+  }
+  @-o-keyframes a-gradient-beta {
+    0% {
+      background-position: 0 11%;
+    }
+    50% {
+      background-position: 100% 90%;
+    }
+    100% {
+      background-position: 0 11%;
+    }
+  }
+  @keyframes a-gradient-beta {
+    0% {
+      background-position: 0 11%;
+    }
+    50% {
+      background-position: 100% 90%;
+    }
+    100% {
+      background-position: 0 11%;
+    }
+  }
+}
