@@ -11,3 +11,14 @@
 @import './atoms/_skew';
 @import './atoms/_buttons';
 @import './molecules/_header';
+
+*
+{
+    font-family: 'Work Sans', sans-serif;
+    font-weight:300;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Work Sans', sans-serif;
+    font-weight:700;
+}
