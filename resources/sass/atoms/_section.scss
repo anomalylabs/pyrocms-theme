@@ -1,0 +1,29 @@
+.a-section 
+{
+    margin: 100px 0 150px;
+    position: relative;
+
+    &.--flatTop
+    {
+        &:before 
+        {
+            content:"";
+            background:#fff;
+            height:200px;
+            position: absolute;
+            top: -127px;
+            width:100vw;
+        }
+    }
+
+    &.--pink 
+    {
+        background:$pink;
+        padding:100px 0;
+    }
+    &.--purple 
+    {
+        background:$purple;
+        padding:100px 0;
+    }
+}

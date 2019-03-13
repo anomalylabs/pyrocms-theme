@@ -8,10 +8,13 @@
 @import '~bootstrap/scss/type';
 @import '~bootstrap/scss/bootstrap-grid';
 
+@import './atoms/_section';
 @import './atoms/_skew';
 @import './atoms/_buttons';
+@import './atoms/_iconbtnList';
 @import './molecules/_header';
 @import './molecules/_iconbtn';
+@import './molecules/_iconlist';
 
 *
 {
@@ -22,4 +25,13 @@ h1,h2,h3,h4,h5,h6
 {
     font-family: 'Work Sans', sans-serif;
     font-weight:700;
+}
+
+p 
+{
+    margin:0;
+}
+p+p 
+{
+    margin-top:1rem;
 }

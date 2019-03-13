@@ -1,0 +1,95 @@
+.a-title.--xlarge
+{
+    font-size:4rem;
+    margin-bottom:7rem;
+    line-height: 1.1;
+    text-align: center;
+}
+.m-iconlist
+{
+    padding:0;
+    list-style-type:none;
+    
+    li
+    {
+        display: flex;
+        margin-top: 8rem;
+        &:first-child
+        {
+            margin-top: 0;
+        }
+
+        div:first-child
+        {
+            width: 70%;
+            min-width: 70%;
+        }
+        div:last-child
+        {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            padding:0 1rem;
+        }
+        div:last-child svg
+        {
+            width: 207px;
+            height: 207px;
+        }
+    }
+    
+
+    // First 
+    // li:nth-child(odd)
+    // {
+    //     div:first-child
+    //     {
+    //         margin-right: 3rem;
+
+    //         order: 1;
+    //     }
+    //     div:last-child
+    //     {
+    //         order: 2;
+    //     }
+    // }
+    // // Second
+    // li:nth-child(even)
+    // {
+    //     div:first-child
+    //     {
+    //         order: 2;
+    //     }
+    //     div:last-child
+    //     {
+    //         margin-right: 3rem;
+
+    //         order: 1;
+    //     }
+    // }
+
+    &__title 
+    {
+        line-height: 1;
+        margin-bottom:1rem;
+        font-size:2rem;
+    }
+    p 
+    {
+        font-size:1.2rem;
+    }
+    p span
+    {
+        
+        color: $pink;
+        font-size:1.2rem;
+        margin-bottom:1rem;
+        display: block;
+    }
+    p .a-button
+    {
+        
+        margin-top:2rem;
+    }
+}

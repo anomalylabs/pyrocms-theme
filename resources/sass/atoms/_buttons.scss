@@ -37,3 +37,12 @@
 {
     width:100%;
 }
+
+// Colors
+.a-button
+{
+    &.--antiquewhite
+    {
+        background:antiquewhite;
+    }
+}
