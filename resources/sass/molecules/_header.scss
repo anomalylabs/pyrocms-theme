@@ -3,7 +3,7 @@
 {
     display: flex;
 
-    height: 100vh;
+    height: 700px;
     *
     {
         text-align: left;
@@ -12,10 +12,9 @@
     }
     h1
     {
-        font-size: 3.5rem;
-        line-height: 1.1;
-
-        margin-bottom: 1rem;
+        margin: 2.5rem 0 1rem;
+    font-size: 2.2rem;
+    line-height: 1.1;
     }
     p
     {
@@ -23,7 +22,7 @@
     }
     .a-button
     {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
 
         color: #fff !important;
         background: $blue;
@@ -37,7 +36,7 @@
         display: flex;
         flex-direction: column;
 
-        height: calc(100% - 100px);
+        height:100%;
 
         justify-content: center;
     }
@@ -48,147 +47,12 @@
         width: 100vw;
         height: auto;
     }
-}
-.m-header.--gradient
-{
-    -webkit-animation: a-gradient 28s ease infinite;
-       -moz-animation: a-gradient 28s ease infinite;
-         -o-animation: a-gradient 28s ease infinite;
-            animation: a-gradient 28s ease infinite;
 
-    background: linear-gradient(337deg, #838dff, #cd74ff, #ff8ac1);
-    background-size: 600% 600%;
-
-    @-webkit-keyframes a-gradient
+    &__content 
     {
-        0%
-        {
-            background-position: 0 79%;
-        }
-        50%
-        {
-            background-position: 100% 22%;
-        }
-        100%
-        {
-            background-position: 0 79%;
-        }
-    }
-    @-moz-keyframes a-gradient
-    {
-        0%
-        {
-            background-position: 0 79%;
-        }
-        50%
-        {
-            background-position: 100% 22%;
-        }
-        100%
-        {
-            background-position: 0 79%;
-        }
-    }
-    @-o-keyframes a-gradient
-    {
-        0%
-        {
-            background-position: 0 79%;
-        }
-        50%
-        {
-            background-position: 100% 22%;
-        }
-        100%
-        {
-            background-position: 0 79%;
-        }
-    }
-    @keyframes a-gradient
-    {
-        0%
-        {
-            background-position: 0 79%;
-        }
-        50%
-        {
-            background-position: 100% 22%;
-        }
-        100%
-        {
-            background-position: 0 79%;
-        }
-    }
-}
-
-.m-header.--gradient-beta
-{
-    -webkit-animation: a-gradient-beta 28s ease infinite;
-       -moz-animation: a-gradient-beta 28s ease infinite;
-         -o-animation: a-gradient-beta 28s ease infinite;
-            animation: a-gradient-beta 28s ease infinite;
-
-    background: linear-gradient(328deg, #838dff, #cd74ff, #ff8ac1);
-    background-size: 600% 600%;
-
-    @-webkit-keyframes a-gradient-beta
-    {
-        0%
-        {
-            background-position: 0 11%;
-        }
-        50%
-        {
-            background-position: 100% 90%;
-        }
-        100%
-        {
-            background-position: 0 11%;
-        }
-    }
-    @-moz-keyframes a-gradient-beta
-    {
-        0%
-        {
-            background-position: 0 11%;
-        }
-        50%
-        {
-            background-position: 100% 90%;
-        }
-        100%
-        {
-            background-position: 0 11%;
-        }
-    }
-    @-o-keyframes a-gradient-beta
-    {
-        0%
-        {
-            background-position: 0 11%;
-        }
-        50%
-        {
-            background-position: 100% 90%;
-        }
-        100%
-        {
-            background-position: 0 11%;
-        }
-    }
-    @keyframes a-gradient-beta
-    {
-        0%
-        {
-            background-position: 0 11%;
-        }
-        50%
-        {
-            background-position: 100% 90%;
-        }
-        100%
-        {
-            background-position: 0 11%;
-        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top:100px;
     }
 }

@@ -1,0 +1,152 @@
+nav
+{
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 75px;
+    margin: 20px 0;
+}
+
+
+
+.m-grbkg
+{
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    &__cover,
+    &__background
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__cover
+    {
+        z-index: 2;
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .m-header__sign &
+    {
+        position: absolute;
+        z-index: -1;
+        top: auto;
+        right: 0vw;
+        bottom: -15vh;
+
+        width: 30vh;
+        height: 60vh;
+    }
+
+    .m-header__content &
+    {
+        width: 325px;
+        height: 85px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.m-grbkg__background
+{
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-animation: a-gradient-beta 28s ease infinite;
+       -moz-animation: a-gradient-beta 28s ease infinite;
+         -o-animation: a-gradient-beta 28s ease infinite;
+            animation: a-gradient-beta 28s ease infinite;
+
+    background: linear-gradient(328deg, #838dff, #cd74ff, #ff8ac1);
+    background-size: 600% 600%;
+
+    @-webkit-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @-moz-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @-o-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+}
