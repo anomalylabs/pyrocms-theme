@@ -41,14 +41,13 @@ nav
         position: absolute;
         z-index: -1;
         top: auto;
-        right: 0vw;
-        bottom: -10vh;
-
-        width: 30vh;
-        height: 60vh;
+        right: -7vw;
+        bottom: 10vh;
+        width: 21vh;
+        height: 42vh;
     }
 
-    .m-header__content &
+    .m-header__content &.--text
     {
         width: 600px;
         height: 157px;
