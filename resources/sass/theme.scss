@@ -12,16 +12,20 @@
 @import './atoms/_skew';
 @import './atoms/_buttons';
 @import './atoms/_iconbtnList';
+@import './atoms/_code';
 @import './molecules/_header';
 @import './molecules/_grbkg';
 @import './molecules/_iconbtn';
 @import './molecules/_iconlist';
 @import './molecules/_minicard';
+@import './vendor/_codemirror';
 
 *
 {
     font-family: 'Work Sans', sans-serif;
     font-weight:300;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 h1,h2,h3,h4,h5,h6
 {
