@@ -40,6 +40,8 @@ const app = new Vue({
 
 
 
+import './src/excard';
+
 
 // Expanding Cards
 
@@ -122,97 +124,97 @@ const app = new Vue({
 
 
 
-document.addEventListener('click', function (event) {
+// document.addEventListener('click', function (event) {
 
 
-  // If the clicked element doesn't have the right selector, bail
-  if (!event.target.matches('.js-expander')) return;
-  console.log('Clicked');
-  // Don't follow the link
-  //event.preventDefault();
+//   // If the clicked element doesn't have the right selector, bail
+//   if (!event.target.matches('.js-expander')) return;
+//   console.log('Clicked');
+//   // Don't follow the link
+//   //event.preventDefault();
 
-  // Log the clicked element in the console
-  console.log(event.target);
+//   // Log the clicked element in the console
+//   console.log(event.target);
 
-  const thisCell = event.target.closest(".card");
-  console.log(thisCell);
+//   const thisCell = event.target.closest(".card");
+//   console.log(thisCell);
 
-  if (thisCell.classList.contains('is-collapsed')) {
-    console.log('it is collapsed');
-    const cells = document.getElementsByClassName('card');
-    for (let cell of cells) {
-      cell.classList.remove('is-expanded');
-      cell.classList.add('is-collapsed');
-      cell.classList.add('is-inactive');
-    }
+//   if (thisCell.classList.contains('is-collapsed')) {
+//     console.log('it is collapsed');
+//     const cells = document.getElementsByClassName('card');
+//     for (let cell of cells) {
+//       cell.classList.remove('is-expanded');
+//       cell.classList.add('is-collapsed');
+//       cell.classList.add('is-inactive');
+//     }
 
-    thisCell.classList.remove('is-collapsed');
-    thisCell.classList.add('is-expanded');
-
-
-  } else {
-    console.log('No, its not collapsed');
-    const cells = document.getElementsByClassName('card');
-    for (let cell of cells) {
-      cell.classList.remove('is-inactive');
-    }
-
-    thisCell.classList.remove('is-expanded');
-    thisCell.classList.add('is-collapsed');
-
-  }
-
-}, false);
-
-document.addEventListener('click', function (event) {
-  // If the clicked element doesn't have the right selector, bail
-  if (!event.target.matches('.js-collapser')) return;
-
-  const thisCell = event.target.closest(".card");
-
-  const cells = document.getElementsByClassName('card');
-  for (let cell of cells) {
-    cell.classList.remove('is-inactive');
-  }
-
-  thisCell.classList.remove('is-expanded');
-  thisCell.classList.add('is-collapsed');
-
-}, false);
+//     thisCell.classList.remove('is-collapsed');
+//     thisCell.classList.add('is-expanded');
 
 
+//   } else {
+//     console.log('No, its not collapsed');
+//     const cells = document.getElementsByClassName('card');
+//     for (let cell of cells) {
+//       cell.classList.remove('is-inactive');
+//     }
+
+//     thisCell.classList.remove('is-expanded');
+//     thisCell.classList.add('is-collapsed');
+
+//   }
+
+// }, false);
+
+// document.addEventListener('click', function (event) {
+//   // If the clicked element doesn't have the right selector, bail
+//   if (!event.target.matches('.js-collapser')) return;
+
+//   const thisCell = event.target.closest(".card");
+
+//   const cells = document.getElementsByClassName('card');
+//   for (let cell of cells) {
+//     cell.classList.remove('is-inactive');
+//   }
+
+//   thisCell.classList.remove('is-expanded');
+//   thisCell.classList.add('is-collapsed');
+
+// }, false);
 
 
 
-var $cell = $('.card');
 
-//open and close card when clicked on card
-$cell.find('.js-expander').click(function () {
 
-  var $thisCell = $(this).closest('.card');
+// var $cell = $('.card');
 
-  if ($thisCell.hasClass('is-collapsed')) {
-    $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
-    $thisCell.removeClass('is-collapsed').addClass('is-expanded');
+// //open and close card when clicked on card
+// $cell.find('.js-expander').click(function () {
 
-    if ($cell.not($thisCell).hasClass('is-inactive')) {
-      //do nothing
-    } else {
-      $cell.not($thisCell).addClass('is-inactive');
-    }
+//   var $thisCell = $(this).closest('.card');
 
-  } else {
-    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-    $cell.not($thisCell).removeClass('is-inactive');
-  }
-});
+//   if ($thisCell.hasClass('is-collapsed')) {
+//     $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+//     $thisCell.removeClass('is-collapsed').addClass('is-expanded');
 
-//close card when click on cross
-$cell.find('.js-collapser').click(function () {
+//     if ($cell.not($thisCell).hasClass('is-inactive')) {
+//       //do nothing
+//     } else {
+//       $cell.not($thisCell).addClass('is-inactive');
+//     }
 
-  var $thisCell = $(this).closest('.card');
+//   } else {
+//     $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+//     $cell.not($thisCell).removeClass('is-inactive');
+//   }
+// });
 
-  $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-  $cell.not($thisCell).removeClass('is-inactive');
+// //close card when click on cross
+// $cell.find('.js-collapser').click(function () {
 
-});
+//   var $thisCell = $(this).closest('.card');
+
+//   $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+//   $cell.not($thisCell).removeClass('is-inactive');
+
+// });
