@@ -1,3 +1,6 @@
+@import url("https://use.typekit.net/lvv4vzv.css");
+
+
 // Created by Pixney AB
 @import '~bootstrap/scss/functions';
 @import 'variables';
@@ -18,19 +21,20 @@
 @import './molecules/_iconbtn';
 @import './molecules/_iconlist';
 @import './molecules/_minicard';
+@import './molecules/_excard';
 @import './vendor/_codemirror';
 
 *
 {
-    font-family: 'Work Sans', sans-serif;
-    font-weight:300;
+    font-family: quasimoda, sans-serif;
+    font-weight:400;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Work Sans', sans-serif;
-    font-weight:700;
+    letter-spacing: -1px;
+    font-weight:800;
 }
 
 p 

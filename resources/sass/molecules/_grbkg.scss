@@ -43,8 +43,8 @@ nav
         top: auto;
         right: -7vw;
         bottom: 10vh;
-        width: 21vh;
-        height: 42vh;
+        width: 770px;
+        height: 400px;
     }
 
     .m-header__content &.--text
@@ -60,6 +60,94 @@ nav
 
 
 
+
+
+
+.animatedGradient
+{
+    z-index: 1;
+    
+
+    -webkit-animation: a-gradient-beta 28s ease infinite;
+       -moz-animation: a-gradient-beta 28s ease infinite;
+         -o-animation: a-gradient-beta 28s ease infinite;
+            animation: a-gradient-beta 28s ease infinite;
+
+    background: linear-gradient(328deg, #838dff, #cd74ff, #ff8ac1);
+    background-size: 600% 600%;
+
+    @-webkit-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @-moz-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @-o-keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+
+    @keyframes a-gradient-beta
+    {
+        0%
+        {
+            background-position: 0 11%;
+        }
+
+        50%
+        {
+            background-position: 100% 90%;
+        }
+
+        100%
+        {
+            background-position: 0 11%;
+        }
+    }
+}
 
 
 

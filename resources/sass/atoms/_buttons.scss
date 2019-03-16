@@ -48,4 +48,13 @@
     {
         background:antiquewhite;
     }
+    &.--white
+    {
+        background:#fff
+    }
+    &.--pink
+    {
+        background:$pink;
+        color:#fff !important;
+    }
 }
