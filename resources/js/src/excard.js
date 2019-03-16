@@ -14,12 +14,12 @@ document.addEventListener('click', function (event) {
     // Log the clicked element in the console
     console.log(event.target);
   
-    const thisCell = event.target.closest(".card");
+    const thisCell = event.target.closest(".m-excards__card");
     console.log(thisCell);
   
     if (thisCell.classList.contains('is-collapsed')) {
       console.log('it is collapsed');
-      const cells = document.getElementsByClassName('card');
+      const cells = document.getElementsByClassName('m-excards__card');
       for (let cell of cells) {
         cell.classList.remove('is-expanded');
         cell.classList.add('is-collapsed');
@@ -32,7 +32,7 @@ document.addEventListener('click', function (event) {
   
     } else {
       console.log('No, its not collapsed');
-      const cells = document.getElementsByClassName('card');
+      const cells = document.getElementsByClassName('m-excards__card');
       for (let cell of cells) {
         cell.classList.remove('is-inactive');
       }
@@ -48,9 +48,9 @@ document.addEventListener('click', function (event) {
     // If the clicked element doesn't have the right selector, bail
     if (!event.target.matches('.js-collapser')) return;
   
-    const thisCell = event.target.closest(".card");
+    const thisCell = event.target.closest(".m-excards__card");
   
-    const cells = document.getElementsByClassName('card');
+    const cells = document.getElementsByClassName('m-excards__card');
     for (let cell of cells) {
       cell.classList.remove('is-inactive');
     }
