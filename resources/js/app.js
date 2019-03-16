@@ -10,6 +10,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueCodemirror from 'vue-codemirror'
+import VueMouseParallax from 'vue-mouse-parallax'
+Vue.use(VueMouseParallax)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,5 +42,16 @@ const app = new Vue({
 
 
 // Expanding cards
-import './src/excard';
 
+require('./src/excard');
+// var deleteLinks = document.querySelectorAll('.m-excards__card');
+
+// Array.from(deleteLinks).forEach(link => {
+//   console.log(link);
+//     link.addEventListener('click', function (event) {
+//         // if (!confirm(`sure u want to delete ${this.title}`)) {
+//         //     event.preventDefault();
+//         // }
+//         console.log('hello');
+//     });
+// });
