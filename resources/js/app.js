@@ -42,16 +42,5 @@ const app = new Vue({
 
 
 // Expanding cards
-
-require('./src/excard');
-// var deleteLinks = document.querySelectorAll('.m-excards__card');
-
-// Array.from(deleteLinks).forEach(link => {
-//   console.log(link);
-//     link.addEventListener('click', function (event) {
-//         // if (!confirm(`sure u want to delete ${this.title}`)) {
-//         //     event.preventDefault();
-//         // }
-//         console.log('hello');
-//     });
-// });
+import {initExcards} from './src/excard';
+initExcards();
