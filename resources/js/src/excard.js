@@ -9,7 +9,7 @@ function collapse(thisCell,cells) {
 }
 
 
-export function initExcards() {
+export default function exCards() {
 
     const cards = document.querySelectorAll('.m-excards__card');
     const cells = document.getElementsByClassName('m-excards__card');    

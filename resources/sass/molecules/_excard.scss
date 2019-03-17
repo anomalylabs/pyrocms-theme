@@ -1,137 +1,191 @@
-.m-excards {
-    max-width: 1000px;
-    margin: 5em auto;
+// Excards wrapper color
+$excardWrapperBakchroundColor:#f9f9f9;
 
-    background: green;
-    background-color: #fff;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
-    &__cards {
+// Default state
+$excardColor: #fff;
+$excardBackgroundColor: $pink;
+
+// Default hover state
+$excardHoverColor: #fff;
+$excardHoverBackgroundColor: $purple;
+
+//Active State
+$excardActiveColor: #fff;
+$excardActiveBackgroundColor: $blue;
+
+// Expander color
+$excardExpanderBackgroundColor:#f3f3f3;
+
+
+
+.m-excards
+{
+    &__cards
+    {
         display: flex;
 
         padding: 15px;
 
-        background:#f3f3f3;;
+        background: $excardWrapperBakchroundColor;
 
-        flex-flow: row wrap;
+        flex-flow: row wrap;;
     }
 
-    &__card {
+    &__card
+    {
         width: calc((100% / 3) - 30px);
         margin: 15px;
 
-        transition: all 0.2s ease-in-out;
+        transition: all .2s ease-in-out;
 
         //background: blue;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 991px)
+        {
             width: calc((100% / 2) - 30px);
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767px)
+        {
             width: 100%;
         }
 
-        &:hover &Inner {
-            background-color: white;
+        &:hover &Inner
+        {
             transform: scale(1.05);
+
+            background-color: $excardHoverBackgroundColor;
+            color:$excardHoverColor;
         }
 
-        &Inner {
-            background: red;
+        &Inner
+        {
+            font-size: 1.5em;
+
+            position: relative;
+
             width: 100%;
             padding: 30px;
-            position: relative;
+
             cursor: pointer;
-
-            background-color: #fff;
-            color: #000;
-            font-size: 1.5em;
-            text-transform: uppercase;
+            transition: all .2s ease-in-out;
             text-align: center;
+            text-transform: uppercase;
 
-            transition: all 0.2s ease-in-out;
+            color: $excardColor;
+            background-color: $excardBackgroundColor;
 
-            &:after {
-                transition: all 0.3s ease-in-out;
+            &:after
+            {
+                transition: all .3s ease-in-out;
             }
         }
-        &Expander {
-            background: black;
-            transition: all 0.2s ease-in-out;
-            background-color: $pink;
-            width: 100%;
+        &Expander
+        {
+            font-size: 1.5em;
+
             position: relative;
 
             display: flex;
+
+            width: 100%;
+            .inner
+            {
+                padding:15px;
+            }
+
+            transition: all .2s ease-in-out;
+            text-transform: uppercase;
+
+            background-color: $excardExpanderBackgroundColor;
+
             justify-content: center;
             align-items: center;
-
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 1.5em;
         }
 
-        &.is-collapsed {
-           // background:black;
-            .m-excards__cardInner {
-                &:after {
-                    content: "";
+        &.is-collapsed
+        {
+            // background:black;
+            .m-excards__cardInner
+            {
+                &:after
+                {
+                    content: '';
+
                     opacity: 0;
                 }
             }
-            .m-excards__cardExpander {
-                max-height: 0;
-                min-height: 0;
+            .m-excards__cardExpander
+            {
                 overflow: hidden;
+
+                min-height: 0;
+                max-height: 0;
                 margin-top: 0;
+
                 opacity: 0;
             }
-           
         }
 
-        &.is-expanded {
-            .m-excards__cardInner {
-                background-color: turquoise;
+        &.is-expanded
+        {
+            .m-excards__cardInner
+            {
+                color: $excardActiveColor;
+                background-color: $excardActiveBackgroundColor;
 
-                &:after {
-                    content: "";
-                    opacity: 1;
-                    display: block;
-                    height: 0;
-                    width: 0;
+                &:after
+                {
                     position: absolute;
                     bottom: -30px;
                     left: calc(50% - 15px);
-                    border-left: 15px solid transparent;
+
+                    display: block;
+
+                    width: 0;
+                    height: 0;
+
+                    content: '';
+
+                    opacity: 1;
                     border-right: 15px solid transparent;
-                    border-bottom: 15px solid $pink;
+                    border-bottom: 15px solid $excardExpanderBackgroundColor;
+                    border-left: 15px solid transparent;
                 }
             }
-            .m-excards__cardExpander {
-                max-height: 1000px;
-                min-height: 200px;
+            .m-excards__cardExpander
+            {
                 overflow: visible;
+
+                min-height: 200px;
+                max-height: 1000px;
                 margin-top: 30px;
+
                 opacity: 1;
             }
 
-            &:hover {
-                &Inner {
+            &:hover
+            {
+                &Inner
+                {
                     transform: scale(1);
                 }
             }
         }
 
-        &.is-inactive {
-            .m-excards__cardInner {
-                pointer-events: none;
-                opacity: 0.5;
-            }
-            &:hover 
+        &.is-inactive
+        {
+            .m-excards__cardInner
             {
-                .m-excards__cardInner 
+                pointer-events: none;
+
+                opacity: .5;
+            }
+            &:hover
+            {
+                .m-excards__cardInner
                 {
-                    background-color: tomato;
+                    //background-color: tomato;
                     transform: scale(1);
                 }
             }
@@ -143,36 +197,39 @@
 //Expander Widths
 
 //when 3 cards in a row
-@media screen and (min-width: 992px) {
-
-  .m-excards__card:nth-of-type(3n+2) .m-excards__cardExpander {
-    margin-left: calc(-100% - 30px);
-  }
-  .m-excards__card:nth-of-type(3n+3) .m-excards__cardExpander {
-    margin-left: calc(-200% - 60px);
-  }
-  .m-excards__card:nth-of-type(3n+4) {
-    clear: left;
-  }
-  .m-excards__cardExpander {
-    width: calc(300% + 60px);
-  }
-
+@media screen and (min-width: 992px)
+{
+    .m-excards__card:nth-of-type(3n+2) .m-excards__cardExpander
+    {
+        margin-left: calc(-100% - 30px);
+    }
+    .m-excards__card:nth-of-type(3n+3) .m-excards__cardExpander
+    {
+        margin-left: calc(-200% - 60px);
+    }
+    .m-excards__card:nth-of-type(3n+4)
+    {
+        clear: left;
+    }
+    .m-excards__cardExpander
+    {
+        width: calc(300% + 60px);
+    }
 }
 
 //when 2 cards in a row
-@media screen and (min-width: 768px) and (max-width: 991px) {
-
-.m-excards__card:nth-of-type(2n+2) .m-excards__cardExpander {
-    margin-left: calc(-100% - 30px);
-  }
-  .m-excards__card:nth-of-type(2n+3) {
-    clear: left;
-  }
-  .m-excards__cardExpander {
-    width: calc(200% + 30px);
-  }
-
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+    .m-excards__card:nth-of-type(2n+2) .m-excards__cardExpander
+    {
+        margin-left: calc(-100% - 30px);
+    }
+    .m-excards__card:nth-of-type(2n+3)
+    {
+        clear: left;
+    }
+    .m-excards__cardExpander
+    {
+        width: calc(200% + 30px);
+    }
 }
-
-
