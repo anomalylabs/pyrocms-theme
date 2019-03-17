@@ -27,8 +27,8 @@ export default function exCards() {
 
             if (event.target.classList.contains('js-collapser')) {
                 collapseCurrent(thisCard, cards);
-            } else if (thisCard.classList.contains('is-expanded')) {
-                collapseAll(cards);
+            // } else if (thisCard.classList.contains('is-expanded')) {
+            //     collapseAll(cards);
             } else if (thisCard.classList.contains('is-collapsed')) {
                 collapseAll(cards);
                 thisCard.classList.remove('is-inactive');

@@ -52,7 +52,6 @@ $excardExpanderBackgroundColor:#f3f3f3;
 
         &:hover &Inner
         {
-            transform: scale(1.05);
 
             background-color: $excardHoverBackgroundColor;
             color:$excardHoverColor;
@@ -168,7 +167,6 @@ $excardExpanderBackgroundColor:#f3f3f3;
             {
                 &Inner
                 {
-                    transform: scale(1);
                 }
             }
         }
@@ -186,7 +184,6 @@ $excardExpanderBackgroundColor:#f3f3f3;
                 .m-excards__cardInner
                 {
                     //background-color: tomato;
-                    transform: scale(1);
                 }
             }
         }
