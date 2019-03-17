@@ -1,47 +1,40 @@
-
-
-function collapse(thisCell,cells) {
-    for (let cell of cells) {
-        cell.classList.remove('is-inactive');
+function collapseCurrent(thisCard, cards) {
+    for (let card of cards) {
+        card.classList.remove('is-inactive');
     }
-    thisCell.classList.remove('is-expanded');
-    thisCell.classList.add('is-collapsed');
+    thisCard.classList.remove('is-expanded');
+    thisCard.classList.add('is-collapsed');
+}
+
+function collapseAll(cards) {
+    for (let cell of cards) {
+        cell.classList.remove('is-expanded');
+        cell.classList.add('is-collapsed');
+        cell.classList.add('is-inactive');
+    }
 }
 
 
 export default function exCards() {
 
     const cards = document.querySelectorAll('.m-excards__card');
-    const cells = document.getElementsByClassName('m-excards__card');    
-    
+
     Array.from(cards).forEach(card => {
 
         card.addEventListener('click', function (event) {
 
-            const thisCell = event.target.closest(".m-excards__card");
+            const thisCard = event.target.closest(".m-excards__card");
 
             if (event.target.classList.contains('js-collapser')) {
-                console.log('coe');
-                collapse(thisCell,cells);
-
-            } else if (thisCell.classList.contains('is-collapsed')) {
-
-                for (let cell of cells) {
-                    cell.classList.remove('is-expanded');
-                    cell.classList.add('is-collapsed');
-                    cell.classList.add('is-inactive');
-                }
-
-                thisCell.classList.remove('is-inactive');
-                thisCell.classList.remove('is-collapsed');
-                thisCell.classList.add('is-expanded');
-
-
-            } else {
-                // Use if we would like to use the button to toggle collapsed.
+                collapseCurrent(thisCard, cards);
+            } else if (thisCard.classList.contains('is-expanded')) {
+                collapseAll(cards);
+            } else if (thisCard.classList.contains('is-collapsed')) {
+                collapseAll(cards);
+                thisCard.classList.remove('is-inactive');
+                thisCard.classList.remove('is-collapsed');
+                thisCard.classList.add('is-expanded');
             }
-
-
         });
     });
 
