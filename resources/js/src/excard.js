@@ -9,8 +9,7 @@ function collapseCurrent(thisCard, cards) {
 function collapseAll(cards) {
     for (let cell of cards) {
         cell.classList.remove('is-expanded');
-        cell.classList.add('is-collapsed');
-        cell.classList.add('is-inactive');
+        cell.classList.add('is-collapsed','is-inactive');
     }
 }
 
@@ -31,8 +30,7 @@ export default function exCards() {
             //     collapseAll(cards);
             } else if (thisCard.classList.contains('is-collapsed')) {
                 collapseAll(cards);
-                thisCard.classList.remove('is-inactive');
-                thisCard.classList.remove('is-collapsed');
+                thisCard.classList.remove('is-inactive','is-collapsed');
                 thisCard.classList.add('is-expanded');
             }
         });
